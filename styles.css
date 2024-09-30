@@ -1,11 +1,11 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to right, #00d4ff, #090979);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #00d4ff, #090979);
 }
 
 .container {
