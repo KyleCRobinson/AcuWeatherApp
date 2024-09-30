@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #00d4ff, #090979); 
+    background-color: linear-gradient(to right, #00d4ff, #090979); 
 }
 
 .container {
