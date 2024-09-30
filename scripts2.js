@@ -24,7 +24,7 @@ async function weatherFn(cName) {
 function weatherShowFn(data) {
 	$('#city-name').text(data.name);
 	$('#date').text(moment().
-		format('MMMM Do YYYY, h:mm:ss a'));
+		format('MMMM Do YYYY'));
 	$('#temperature').
 		html(`${data.main.temp}°C`);
 	$('#description').
