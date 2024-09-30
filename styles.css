@@ -83,3 +83,13 @@ body {
     font-size: 14px;
     color: black;
 }
+
+
+#map {
+    height: 400px;
+    width: 400px;
+}
+        
+h2 {
+    color: #308d46;
+}
