@@ -76,10 +76,10 @@ body {
 
 #wind-speed {
     font-size: 16px;
-    color: rgb(255, 0, 0);
+    color: black;
 }
 
 #date {
     font-size: 14px;
-    color: rgb(255, 0, 0);
+    color: black;
 }
