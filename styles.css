@@ -21,9 +21,6 @@ body {
     width: 450px;
 }
 
-.weather-card:hover {
-    transform: scale(1.05);
-}
 
 #city-input {
     padding: 15px;
