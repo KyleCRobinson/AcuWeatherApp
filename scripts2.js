@@ -41,10 +41,14 @@ function weatherShowFn(data,data2) {
 	//$('#weather-icon').
 		//(`${data.weather[3].icon}`);
 	$('#weather-info').fadeIn();
-}
-
+	
 	let locationIcon = document.querySelector('#weather-icon');
 	const {icon} = data.weather[0];
 	locationIcon.innerHTML = `<img src="icons/${icon}.png">`;
+
+
+}
+
+	
 
 	
