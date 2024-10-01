@@ -21,12 +21,28 @@ async function weatherFn(cName) {
 	}
 }
 
-function weatherShowFn(data) {
+async function weatherFn2(cName){
+	const temp2 =
+		`${url}?q=${cName}&appid=${apiKey}&units=metric`;()
+	try {
+		const res2 = await fetch(temp2);
+		const data2 = await res2.json();
+		if (res2.ok) {
+			weatherShowFn(data2);
+		} else {
+			alert('City not found. Please try again.');
+		}
+	} catch (error) {
+		console.error('Error fetching weather data:', error);
+	}
+}
+
+function weatherShowFn(data,data2) {
 	$('#city-name').text(data.name);
 	$('#date').text(moment().
 		format('MMMM Do YYYY'));
 	$('#temperature').
-		html(`${data.main.temp}°F`);
+		html(`${data.main.temp}°F | ${data2.main.temp}°C`);
 	$('#description').
 		text(data.weather[0].description);
 	$('#wind-speed').
