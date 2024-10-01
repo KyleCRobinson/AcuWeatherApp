@@ -41,11 +41,6 @@ function weatherShowFn(data,data2) {
 	//$('#weather-icon').
 		//(`${data.weather[3].icon}`);
 	$('#weather-info').fadeIn();
-
-	let img = document.getElementById('#weather-icon');
-	let dynamicImage = document.createElement('#weather-icon');
-	dynamicImage = 'https://openweathermap.org/img/wn/10d@2x.png';
-	img.appendChild(dynamicImage);
 }
 
 
