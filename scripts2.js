@@ -42,12 +42,13 @@ function weatherShowFn(data,data2) {
 		//attr('src', `${data.weather[0].icon}`);
 	$('#weather-info').fadeIn();
 
+	let locationIcon = document.querySelector('#weather-icon');
+	const {icon} = data.weather[0];
+	document.getElementById("#weather-icon").src = `<img src="icons/${icon}.png">`;
 
 }
 
-let locationIcon = document.querySelector('#weather-icon');
-const {icon} = data.weather[0];
-document.getElementById("#weather-icon").src = `<img src="icons/${icon}.png">`;
+
 
 
 	
