@@ -38,21 +38,16 @@ function weatherShowFn(data,data2) {
 		text(data.weather[0].description);
 	$('#wind-speed').
 		html(`Wind Speed: ${data.wind.speed} m/s`);
-	$('#weather-icon').
-		attr('src', `${data.weather[0].icon}`);
+	//$('#weather-icon').
+		//attr('src', `${data.weather[0].icon}`);
 	$('#weather-info').fadeIn();
-
-	//var iconcode = data.weather[0].icon;
-	//var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-	//$('#wicon').attr('src', iconurl);
 
 
 }
 
-//let locationIcon = document.querySelector('#weather-icon');
-//const {icon} = data.weather[0];
-//document.getElementById("#weather-icon").src = `<img src="icons/${icon}.png">`;
+let locationIcon = document.querySelector('#weather-icon');
+const {icon} = data.weather[0];
+document.getElementById("#weather-icon").src = `<img src="icons/${icon}.png">`;
 
-//document.getElementById("#weather-icon").src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
 
 	
