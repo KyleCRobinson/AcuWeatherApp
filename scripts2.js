@@ -38,7 +38,15 @@ function weatherShowFn(data,data2) {
 		text(data.weather[0].description);
 	$('#wind-speed').
 		html(`Wind Speed: ${data.wind.speed} m/s`);
-	$('#weather-icon').
-		img(`${data.weather[3].icon}`);
+	//$('#weather-icon').
+		//(`${data.weather[3].icon}`);
 	$('#weather-info').fadeIn();
+
+	let img = document.getElementById('#weather-icon');
+	let dynamicImage = document.createElement('#weather-icon');
+	dynamicImage = 'https://openweathermap.org/img/wn/10d@2x.png';
+	img.appendChild(dynamicImage);
 }
+
+
+
