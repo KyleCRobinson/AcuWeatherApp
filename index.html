@@ -31,7 +31,7 @@
 				<script>
 					let img = document.getElementById('weather-icon');
 					let dynamicImage = document.createElement('weather-icon');
-					dynamicImage.innerHTML = 'https://openweathermap.org/img/wn/10d@2x.png';
+					dynamicImage.innerHTML = `${url}?q=${cName}&appid=${apiKey}&img/wn/`; 
 					document.body.appendChild(dynamicImage);
 					//img.appendChild(dynamicImage);
 				</script>
