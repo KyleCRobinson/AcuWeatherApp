@@ -8,27 +8,17 @@ $(document).ready(function () {
 async function weatherFn(cName) {
 	const temp =
 		`${url}?q=${cName}&appid=${apiKey}&units=imperial`;
+
+	const temp2 =
+		`${url}?q=${cName}&appid=${apiKey}&units=metric`;
+
 	try {
 		const res = await fetch(temp);
+		const res2 = await fetch(temp2)
 		const data = await res.json();
-		if (res.ok) {
-			weatherShowFn(data);
-		} else {
-			alert('City not found. Please try again.');
-		}
-	} catch (error) {
-		console.error('Error fetching weather data:', error);
-	}
-}
-
-async function weatherFn2(cName){
-	const temp2 =
-		`${url}?q=${cName}&appid=${apiKey}&units=metric`;()
-	try {
-		const res2 = await fetch(temp2);
 		const data2 = await res2.json();
-		if (res2.ok) {
-			weatherShowFn(data2);
+		if (res.ok && res2.ok) {
+			weatherShowFn(data,data2);
 		} else {
 			alert('City not found. Please try again.');
 		}
