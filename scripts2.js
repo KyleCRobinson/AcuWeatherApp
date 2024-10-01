@@ -7,7 +7,7 @@ $(document).ready(function () {
 
 async function weatherFn(cName) {
 	const temp =
-		`${url}?q=${cName}&appid=${apiKey}&units=metric`;
+		`${url}?q=${cName}&appid=${apiKey}&units=imperial`;
 	try {
 		const res = await fetch(temp);
 		const data = await res.json();
@@ -26,7 +26,7 @@ function weatherShowFn(data) {
 	$('#date').text(moment().
 		format('MMMM Do YYYY'));
 	$('#temperature').
-		html(`${data.main.temp}°C`);
+		html(`${data.main.temp}°F`);
 	$('#description').
 		text(data.weather[0].description);
 	$('#wind-speed').
