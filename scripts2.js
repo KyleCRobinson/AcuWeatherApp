@@ -41,14 +41,12 @@ function weatherShowFn(data,data2) {
 	//$('#weather-icon').
 		//(`${data.weather[3].icon}`);
 	$('#weather-info').fadeIn();
-	
-	let locationIcon = document.querySelector('#weather-icon');
-	const {icon} = data.weather[0];
-	locationIcon.innerHTML = `<img src="icons/${icon}.png">`;
-
-
 }
 
-	
+//let locationIcon = document.querySelector('#weather-icon');
+//const {icon} = data.weather[0];
+//locationIcon.innerHTML = `<img src="icons/${icon}.png">`;
+
+document.getElementById("#weather-icon").src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
 
 	
