@@ -45,7 +45,7 @@ function weatherShowFn(data,data2) {
 
 'use strict';
 
-var myMap = L.map('mapId', { zoomControl: false })
+var myMap = L.map('map', { zoomControl: false })
     .setView([-23.9608, -46.3331], 13);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
