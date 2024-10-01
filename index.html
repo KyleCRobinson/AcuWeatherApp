@@ -31,8 +31,9 @@
 				<script>
 					let img = document.getElementById('weather-icon');
 					let dynamicImage = document.createElement('weather-icon');
-					dynamicImage = 'https://openweathermap.org/img/wn/10d@2x.png';
-					img.appendChild(dynamicImage);
+					dynamicImage.innerHTML = 'https://openweathermap.org/img/wn/10d@2x.png';
+					document.body.appendChild(dynamicImage);
+					//img.appendChild(dynamicImage);
 				</script>
 				
 				<!--<iframe width="300" height="250" src="https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={apiKey}" style="border: 1px solid black"></iframe><br/><small>
