@@ -44,7 +44,7 @@ function weatherShowFn(data,data2) {
 }
 
 	let locationIcon = document.querySelector('#weather-icon');
-	const {icon} = data.weather[0].icon;
+	const {icon} = data.weather[0];
 	locationIcon.innerHTML = `<img src="icons/${icon}.png">`;
 
 	
