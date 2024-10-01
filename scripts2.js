@@ -1,5 +1,5 @@
 const url ='https://api.openweathermap.org/data/2.5/weather';
-const url2 = 'https://openweathermap.org/img/wn/10d@2x.png';
+//const url2 = 'https://openweathermap.org/img/wn/10d@2x.png';
 const apiKey ='f00c38e0279b7bc85480c3fe775d518c';
 
 $(document).ready(function () {
@@ -39,9 +39,6 @@ function weatherShowFn(data,data2) {
 	$('#wind-speed').
 		html(`Wind Speed: ${data.wind.speed} m/s`);
 	$('#weather-icon').
-		attr('src',
-			`...`);
-		//html(`${data.weather[0].icon}`);
-		
+		html(`${data.weather[3].icon}`);
 	$('#weather-info').fadeIn();
 }
