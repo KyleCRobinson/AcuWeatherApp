@@ -42,3 +42,33 @@ function weatherShowFn(data,data2) {
 			`...`);
 	$('#weather-info').fadeIn();
 }
+
+'use strict';
+
+var myMap = L.map('mapId', { zoomControl: false })
+    .setView([-23.9608, -46.3331], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+}).addTo(myMap);
+
+var marker = L.marker([-23.9608, -46.3331])
+  .addTo(myMap)
+  .bindPopup('<b>Santos - SP</b>')
+  .openPopup();
+
+L.Control.geocoder({
+  defaultMarkGeocode: false,
+  placeholder: "Search address...",
+}).on('markgeocode', function(e) {
+    var bbox = e.geocode.bbox;
+    var poly = L.polygon([
+      bbox.getSouthEast(),
+      bbox.getNorthEast(),
+      bbox.getNorthWest(),
+      bbox.getSouthWest()
+    ]).addTo(myMap);
+    myMap.fitBounds(poly.getBounds());
+  })
+  .addTo(myMap);

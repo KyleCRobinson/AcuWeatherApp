@@ -83,3 +83,8 @@ body {
     font-size: 14px;
     color: black;
 }
+
+
+#map{
+    flex-grow: 1;
+}
