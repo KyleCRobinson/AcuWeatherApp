@@ -42,10 +42,9 @@ function weatherShowFn(data,data2) {
 		//(`${data.weather[3].icon}`);
 	$('#weather-info').fadeIn();
 
-	let img = document.getElementById('#weather-icon');
-	let dynamicImage = document.createElement('#weather-icon');
-	dynamicImage.innerHTML = `${url2}?q=${cName}&appid=${apiKey}&img/wn/`; 
-	document.body.appendChild(dynamicImage);
+	let locationIcon = document.querySelector('#weather-icon');
+	const {icon} = data.weather[0];
+	locationIcon.innerHTML = `<img src="icons/${icon}.png">`;
 }
 
 
